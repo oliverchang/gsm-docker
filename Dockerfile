@@ -11,7 +11,7 @@ RUN apt-get install -y \
 
 RUN wget https://linuxgsm.com/dl/linuxgsm.sh -O /usr/local/bin/linuxgsm.sh && chmod 755 /usr/local/bin/linuxgsm.sh
 
-RUN adduser --uid 1337 --group --system user && adduser user tty
+RUN adduser --uid 1337 --group --system --shell /bin/bash user 
 USER user
 WORKDIR /home/user
 VOLUME /home/user
